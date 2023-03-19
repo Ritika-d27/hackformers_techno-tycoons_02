@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.front-wrapper {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.8)),
+        url('https://cdn11.bigcommerce.com/s-sfwp5/images/stencil/original/uploaded_images/shutterstock-1964177716.jpg?t=1645158024');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Navbar */
+.header {
+    width: 100%;
+    padding: 0.7rem 0;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    width: 50px;
+    max-width: 100%;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    padding: 0.4rem 0;
+    transition: padding 1s ease;
+    z-index: 100;
+    background: #16181883;
+    backdrop-filter: blur(3px);
+}
+
+.header.sticky .lists li a {
+    color: #fff;
+}
+
+.logo img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--light-blue);
+}
+
+.lists {
+    list-style: none;
+}
+
+.lists li {
+    display: inline-block;
+    margin: 0 1.6rem;
+}
+
+.lists li a {
+    color: white;
+    font-size: 1.2vw;
+}
+
+.lists .active {
+    padding: 0.2rem 1.2rem;
+    background: var(--light-orange);
+    border-radius: 6px;
+}
+
+.container {
+    display: block;
+    padding: 0 5rem;
+}
+
+/* Main Content */
+.main-content {
+    width: 1100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
+}
+
+.main-content .head-title {
+    font-size: 4.2vw;
+    text-transform: capitalize;
+    margin: 2vw 0;
+    letter-spacing: 1px;
+    line-height: 4.2rem;
+    color: transparent;
+    -webkit-text-stroke: 0.2px #fff;
+    text-shadow: 10px 5px 30px #bfeaf5b3;
+}
+
+.main-content .text {
+    width: 70%;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 1.2vw;
+    font-weight: 200;
+    color: #ffffffc5;
+    line-height: 2rem;
+}
+
+/* About Us */
+#about,
+#importance {
+    padding: 4rem;
+    background: #ffffffb7;
+}
+
+.title {
+    font-size: 2.6vw;
+    position: relative;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #ff9551;
+}
+
+.about-content {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.about-content .title {
+    color: #161818;
+    margin-bottom: 3rem;
+}
+
+.about-content .title span {
+    color: #ff9551;
+}
+
+.about-content .about-header {
+    display: block;
+    margin: 2rem 0;
+}
+
+.about-content-mid {
+    width: 100%;
+    background: white;
+    box-shadow: 0 10px 30px #bfeaf5b6;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.float {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.about-content-mid .content-in-box {
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%) scale(1.2);
+    width: 300px;
+    height: auto;
+    border: 10px solid #04a3a9;
+    padding: 2.5rem;
+    background: white;
+    box-shadow: 0 0 30px #a9d8e6;
+}
+
+.content-in-box .content-in {
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.about-content-mid .text {
+    flex-basis: 80%;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: #232e2dba;
+    text-align: justify;
+}
+
+/* Importance */
+.importance-card {
+    width: 900px;
+    margin: 10px auto;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px #EEEEEE;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://ied.eu/wp-content/uploads/2018/05/agriculture-economy.png');
+    padding: 4rem;
+    background-size: cover;
+}
+
+.importance-card .head {
+    margin-bottom: 3.8rem;
+}
+
+.importance-card .head h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.head h2::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.importance-card .content p {
+    line-height: 1.8rem;
+    margin: 20px auto;
+    font-size: 1.19vw;
+    letter-spacing: 0.3px;
+    word-spacing: 2px;
+    color: #ECF2FF;
+    text-align: justify;
+}
+
+/* Footer */
+.footer {
+    display: block;
+    text-align: center;
+    padding: 0.6rem 0;
+    background-color: #10203078;
+    color: #fff;
+}

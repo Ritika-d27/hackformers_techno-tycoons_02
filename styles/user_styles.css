@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Add Products */
+.add-products-wrapper {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        url('https://img.freepik.com/free-photo/green-field-with-sun_1160-878.jpg?w=2000');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.products-card {
+    background: #ecf9ff7d;
+    width: 650px;
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+    position: absolute;
+    right: 2.3rem;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    animation: move 2s linear infinite alternate-reverse;
+}
+
+.col-md-6 a {
+    text-decoration: none;
+}
+
+@keyframes move {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 53%;
+    }
+}
+
+.products-card .heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.products-card .msg {
+    text-align: center;
+    font-size: 0.99vw;
+    font-weight: bold;
+    color: #0be408;
+}
+
+.heading .title {
+    font-size: 2.2vw;
+    color: #20262e;
+}
+
+.form {
+    margin: 10px auto;
+}
+
+.form .input-group {
+    margin: 14px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form .input-group label {
+    font-size: 22px;
+    flex-basis: 25%;
+}
+
+.input-group input,
+.input-group select {
+    flex-basis: 74%;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: #d3d9e176;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px #ecfbff46;
+    font-size: 1vw;
+}
+
+.input-group .nobg {
+    background: transparent;
+    font-size: 0.99vw;
+}
+
+.button {
+    margin-top: 40px;
+}
+
+.button button {
+    padding: 8px 15px;
+    border-radius: 7px;
+    border: 0;
+    outline: 0;
+    margin: 0 7px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.99vw;
+}
+
+.button .add {
+    background: #03c988;
+}
+
+.button .reset {
+    background-color: crimson;
+}
+
+/* Login - Register */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.3)),
+        url('https://cdn11.bigcommerce.com/s-sfwp5/images/stencil/original/uploaded_images/shutterstock-1964177716.jpg?t=1645158024');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 420px;
+    border-radius: 14px;
+    padding: 2.1rem;
+    max-width: 85%;
+    background: #b0d7d651;
+    box-shadow: 0 15px 30px #1441724a;
+}
+
+.reg-card {
+    width: 470px;
+}
+
+.top {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: #144272;
+    border-radius: 50%;
+    padding: 1rem;
+    top: -40px;
+}
+
+.top .fa-user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2vw;
+    color: #f1f6f5;
+    transform: translate(-50%, -50%);
+}
+
+.auth-form {
+    margin-top: 2.4rem;
+    width: 100%;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #06283d;
+    letter-spacing: 1px;
+    font-size: 1.7vw;
+}
+
+.auth-form .input-group {
+    width: 100%;
+    margin: 1.6rem auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5f6f9456;
+}
+
+.auth-form .message {
+    text-align: center;
+    color: #121312;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.auth-form .input-group-select select {
+    display: block;
+    width: 280px;
+    margin: 20px auto;
+    padding: 0.4rem 1rem;
+    font-size: 0.99vw;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+    color: #144272;
+}
+
+.auth-form .input-group .label {
+    width: 50px;
+    height: 46px;
+    background: #144272;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form .input-group .label i {
+    font-size: 0.99vw;
+}
+
+.auth-form .input-group .input {
+    flex-basis: 90%;
+    border: 0;
+    outline: 0;
+    background: #fcf9f9;
+    padding: 0.8rem 0.6rem;
+    color: #002b5b;
+    font-size: 0.99vw;
+    border-radius: 0;
+}
+
+.auth-form .input-group .input::placeholder {
+    color: #5f6f94;
+    font-size: 0.99vw;
+}
+
+.rem,
+.button {
+    margin: 3.2rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rem label {
+    font-size: 0.99vw;
+    margin: 0 5px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.rem .check {
+    accent-color: #fff;
+}
+
+.auth-form a {
+    padding: 8px;
+    border-radius: 8px;
+    color: #2C3333;
+    background: #ECF2FF;
+    font-size: 0.99vw;
+    transition: all 0.5s;
+}
+
+.auth-form a:hover {
+    background: #102030;
+    color: #fff;
+}
+
+.auth-form .forget-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.button .submit-btn {
+    padding: 10px 24px;
+    background: #144272;
+    color: #dbf8fc;
+    font-size: 1vw;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-warning {
+    width: 200px;
+}
+
+/* Dropdown Content */
+.dropdown-logo {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    cursor: pointer;
+}
+
+.dropdown-logo .logo {
+    width: 40px;
+    height: 40px;
+    background: #c6d5e1;
+    color: #191919;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    width: 160px;
+    border-radius: 8px;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+}
+
+.dropdown-content .dropdown {
+    padding: 8px;
+}
+
+/* .dropdown-content::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -8px;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #111;
+    border-right: 8px solid transparent;
+} */
+
+.dropdown-logo:hover .dropdown-content {
+    max-height: 200px;
+}
+
+.dropdown-content a {
+    display: block;
+    line-height: 2rem;
+    color: #06283d;
+    cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    display: block;
+}
+
+.header {
+    width: 100%;
+    background: #393E46;
+    padding: 0.6rem 10%;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    padding: 0.4rem 10%;
+    transition: padding 0.5s;
+    backdrop-filter: blur(2px);
+    z-index: 100;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 40px;
+    display: inline-block;
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar .lists {
+    flex: 1;
+    text-align: start;
+}
+
+.lists li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.lists li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.lists span {
+    background: #fff;
+    color: #191919;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-weight: bold;
+}
+
+.message {
+    text-align: center;
+    margin: 10px 0;
+    color: #03C988;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+
+.navbar .cart>span,
+h2 {
+    display: inline-block;
+}
+
+.cart span {
+    color: #c4c8c7;
+    font-size: 20px;
+}
+
+.cart h2 {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.container {
+    padding: 2.5rem 7%;
+}
+
+.container .products {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.products .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.8rem;
+}
+
+.heading h2 {
+    font-size: 2.6vw;
+    position: relative;
+    line-height: 2rem;
+}
+
+.heading h2>span {
+    color: #F99417;
+}
+
+.heading select {
+    width: 340px;
+    border-radius: 8px;
+    padding: 0.4rem;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    background: #959798;
+}
+
+.heading h2::before {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: #F99417;
+    position: absolute;
+    bottom: -16px;
+}
+
+.products-cont {
+    margin: 60px auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row .col-md-3 {
+    margin-top: 2.5rem;
+    width: 340px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #E8E2E2;
+}
+
+.row .image {
+    width: 100%;
+    min-height: auto;
+}
+
+.image img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.col-md-3 .content {
+    padding: 1.1rem 2.3rem;
+}
+
+.col-md-3 .pname {
+    text-align: center;
+    color: #102020;
+    font-weight: bold;
+    font-size: 1.8vw;
+    margin-bottom: 1.2rem;
+}
+
+.col-md-3 .group {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.group p {
+    flex-basis: 50%;
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: #251749;
+}
+
+.group span {
+    flex-basis: 50%;
+    text-align: start;
+    font-size: 18px;
+    line-height: 2rem;
+}
+
+.buttons {
+    margin: 20px 0 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.buttons button,
+.buttons a {
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin: 0 6px;
+    border: 0;
+    outline: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons .buyBtn {
+    background: #37d1df;
+    color: #251749;
+}
+
+.buttons .cartBtn {
+    background: #FFE15D;
+    color: #111;
+    font-size: 0.8vw;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(3px);
+    display: none;
+}
+
+.modal .modal-card {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50%);
+    width: 400px;
+    max-width: 90%;
+    border-radius: 15px;
+    background: #FFED00;
+    box-shadow: 0 5px 30px #aee3ff76;
+    padding: 30px;
+    animation: move 0.6s linear;
+}
+
+@keyframes move {
+    from {
+        top: -300px;
+    }
+
+    to {
+        top: 120px;
+    }
+}
+
+.modal-card .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.modal-header h2 {
+    font-size: 1.5vw;
+    color: #13005A;
+}
+
+.modal-header i {
+    min-width: 30px;
+    min-height: 30px;
+    background: #fff;
+    color: #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal-body .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.modal-body label {
+    font-weight: bold;
+    font-size: 17px;
+    flex-basis: 35%;
+}
+
+.modal-body .input {
+    flex-basis: 60%;
+    width: 100%;
+    padding: 0.6rem 1.2rem;
+    border: 0;
+    outline: 0;
+    background: #fff;
+    color: #104060;
+    border-radius: 9px;
+}
+
+.modal-body .input:read-only {
+    cursor: not-allowed;
+}
+
+.modal-body button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: crimson;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+/* Cart CSS */
+.cart-container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.cart-container .title {
+    margin: 20px 0;
+    text-align: justify;
+    color: #2e3637;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.table {
+    margin: 35px 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table,
+tr,
+th,
+td {
+    border: 1px solid #a7b6b6;
+    text-align: center;
+}
+
+thead tr {
+    background: #262324;
+    color: #fff;
+}
+
+thead th {
+    padding: 1rem 1.6rem;
+    font-size: 1.3vw;
+}
+
+.img {
+    width: 200px;
+    padding: 10px;
+}
+
+td>img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+td {
+    font-size: 1.1vw;
+    font-weight: 100;
+}
+
+.total td {
+    padding: 30px 0;
+    font-size: 1.7vw;
+}
+
+.button {
+    float: right;
+    margin-bottom: 3rem;
+}
+
+.button .checkoutBtn {
+    padding: 10px 30px;
+    border-radius: 8px;
+    background: #0ad971;
+    color: #100101;
+    font-weight: bold;
+    font-size: 1.2vw;    
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+}
